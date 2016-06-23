@@ -10,7 +10,7 @@ var key = 'data';
 newbtn.addEventListener('click',newpage);
 savebtn.addEventListener('click',save);
 fullbtn.addEventListener('click',full_screen);
-aboutbtn..addEventListener('click',pop_show);
+aboutbtn.addEventListener('click',pop_show);
 
 $(function () {
 	data_Load();
