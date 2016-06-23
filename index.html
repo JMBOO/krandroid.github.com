@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>My Note</title>
+  <link rel="stylesheet" href="css/app.css">
+
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<body>
+<div class="header">
+  <h1>My Note</h1>
+  <div class="menu">
+    <button type="button" id="newnote" class="btn-newnote">새노트</button>
+    <button type="button" id="savenote" class="btn-savenote">노트저장</button>
+    <button type="button" id="fullscreen" class="btn-fullscreen">전체화면</button>
+    <button type="button" id="about" class="btn-about"><a href="#layer2" class="btn-example">about</a></button>
+  </div>
+</div>
+
+<div class="container">
+  <textarea id="memo" class="memo" placeholder="내용을 입력하세요"></textarea>
+</div>
+<div class="dim-layer">
+    <div class="dimBg"></div>
+    <div id="layer2" class="pop-layer">
+        <div class="pop-container">
+            <div class="pop-conts">
+                <!--content //-->
+                <p class="ctxt mb20">애플리케이션 정보<br>
+                    My Note<br>
+                    제주대학교 컴퓨터공학과 4학년 2015208018<br><br>
+                    부종민
+                </p>
+
+                <div class="btn-r">
+                    <a href="#" class="btn-layerClose">Close</a>
+                </div>
+                <!--// content-->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/app.js"></script>
+
+</body>
+</html>
