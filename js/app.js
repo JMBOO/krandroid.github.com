@@ -34,7 +34,6 @@ function newpage(event)
 	localStorage.clear();
 	location.reload(true);
 	location.href = location.href;
-	history.go(-1);
 }
 
 function full_screen(event)
