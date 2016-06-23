@@ -33,7 +33,6 @@ function newpage(event)
 {
 	localStorage.clear();
 	location.reload(true);
-	location.href = location.href;
 }
 
 function full_screen(event)
