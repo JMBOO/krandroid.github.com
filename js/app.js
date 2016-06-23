@@ -5,12 +5,14 @@ var savebtn = document.getElementById('savenote');
 var fullbtn = document.getElementById('fullscreen');
 var aboutbtn = document.getElementById('about');
 var text = document.getElementById('memo');
+var closebtn = document.getElementById('close');
 var key = 'data';
 
 newbtn.addEventListener('click',newpage);
 savebtn.addEventListener('click',save);
 fullbtn.addEventListener('click',full_screen);
-aboutbtn.addEventListener('click',pop_show);
+aboutbtn.addEventListener('click',layer_popup);
+closebtn.addEventListener('click',pop_close);
 
 $(function () {
 	data_Load();
@@ -33,6 +35,8 @@ function newpage(event)
 {
 	localStorage.clear();
 	location.reload(true);
+	location.href = location.href;
+	history.go(-1);
 }
 
 function full_screen(event)
@@ -49,10 +53,20 @@ function full_screen(event)
 	}
 }
 
-function pop_show(event){
-	document.getElementById("layer2").style.display='inline'
-}
 
+function layer_popup(event){
+		 if(document.getElementById("layer_body").style.display=="none"){
+				//열어주어라
+				document.getElementById("layer_body").style.display='inline'
+		 }else{
+				//닫아주어라
+				document.getElementById("layer_body").style.display='none'
+		 }
+	}
+
+	function pop_close(event){
+					document.getElementById("layer_body").style.display='none'
+		}
 
 function data_Load()
 {
