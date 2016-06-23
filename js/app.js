@@ -10,7 +10,7 @@ var key = 'data';
 newbtn.addEventListener('click',newpage);
 savebtn.addEventListener('click',save);
 fullbtn.addEventListener('click',full_screen);
-
+aboutbtn..addEventListener('click',pop_show);
 
 $(function () {
 	data_Load();
@@ -49,17 +49,9 @@ function full_screen(event)
 	}
 }
 
-$( document ).ready(function() { 
-       $('.btn-example').click(function(){ 
-        $('#layer2, #layer_body').show(); 
-        $('#layer2').css("top", Math.max(0, $(window).scrollTop() + 100) + "px"); 
-        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px"); 
-    }); 
-    $('#olayer_body, .close').click(function(e){ 
-        e.preventDefault(); 
-        $('#layer2, #layer_body').hide(); 
-    }); 
-});
+function pop_show(event){
+	document.getElementById("layer2").style.display='inline'
+}
 
 
 function data_Load()
