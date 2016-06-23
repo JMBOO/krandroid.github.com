@@ -35,8 +35,6 @@ function newpage(event)
 {
 	localStorage.clear();
 	location.reload(true);
-	location.href = location.href;
-	history.go(-1);
 }
 
 function full_screen(event)
@@ -55,13 +53,7 @@ function full_screen(event)
 
 
 function layer_popup(event){
-		 if(document.getElementById("layer_body").style.display=="none"){
-				//열어주어라
 				document.getElementById("layer_body").style.display='inline'
-		 }else{
-				//닫아주어라
-				document.getElementById("layer_body").style.display='none'
-		 }
 	}
 
 	function pop_close(event){
